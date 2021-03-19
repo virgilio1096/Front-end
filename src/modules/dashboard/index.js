@@ -35,7 +35,12 @@ import { Grid } from '@material-ui/core';
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
+    minHeight: '100%',
     flexGrow: 1,
+    zIndex: 1,
+    overflow: 'hidden',
+    position: 'relative',
+    display: 'flex'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -243,8 +248,6 @@ export default function ButtonAppBar({props, children }) {
           </div>
         </Toolbar>
       </AppBar>
-    <Grid container>
-    <Grid item>
       <Drawer
         variant="permanent"
         classes={{
@@ -320,12 +323,10 @@ export default function ButtonAppBar({props, children }) {
             </Link>
         </List>
       </Drawer>
-    </Grid>
-    <Grid item xs={10}>
+      <main className={classes.content}>
           <div className={classes.toolbar}></div>
             {children}
-    </Grid>
-    </Grid>
+      </main>
     </div>
   );
 }
