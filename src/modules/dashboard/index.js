@@ -35,7 +35,12 @@ import { Grid } from '@material-ui/core';
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
+    minHeight: '100%',
     flexGrow: 1,
+    zIndex: 1,
+    overflow: 'hidden',
+    position: 'relative',
+    display: 'flex'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -134,7 +139,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
+    //backgroundColor: theme.palette.background.default,
     padding: theme.spacing(3),
     overflow: 'auto'
   },
@@ -234,17 +239,12 @@ export default function ButtonAppBar({props, children }) {
               paddingRight: '1.5rem',
               alignItems: 'center'
             }}>
-            <IconButton
-              key={1}
-              onClick={console.log('hola')}
-              color="inherit"
-              title="Languages">
-            </IconButton>
+            {'Amazon',console.log(children)}
           </div>
         </Toolbar>
       </AppBar>
-    <Grid container>
-    <Grid item>
+    {/* <Grid container>
+    <Grid item> */}
       <Drawer
         variant="permanent"
         classes={{
@@ -287,7 +287,7 @@ export default function ButtonAppBar({props, children }) {
           </div>
         </List>
         <Divider />
-        <List component="nav" className={classes.avatarContainer}>
+        <List component="nav">
             <Link href="/usuario/index">
                 <MenuItem
                     item={'Usuario'}
@@ -320,12 +320,10 @@ export default function ButtonAppBar({props, children }) {
             </Link>
         </List>
       </Drawer>
-    </Grid>
-    <Grid item xs={10}>
+      <main className={classes.content}>
           <div className={classes.toolbar}></div>
             {children}
-    </Grid>
-    </Grid>
+      </main>
     </div>
   );
 }
