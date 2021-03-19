@@ -86,7 +86,7 @@ export default function Amazon(props) {
     setLoading(true);
     var config = {
       method: 'put',
-      url: 'http://localhost:5000/delect',
+      url: 'http://localhost:5000/eliminar',
       headers: { }
     };
     Axios(config)
