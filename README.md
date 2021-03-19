@@ -1,3 +1,42 @@
+# Front End de scrape a lo mas vendido en amazon
+
+Despues de aver descargado el proyecto favor de correr el siguiente comando para descargar las dependencias
+
+### `npm install`
+
+cuando termine de descargar ejecutar el siguiente commando para correr el proyecto.
+
+### `npm start`
+
+El primer archivo que vemos al cargar el proyecto es el archivo que esta en rais llamado app.js.
+
+![image](https://user-images.githubusercontent.com/19189836/111837413-d9445100-88c5-11eb-855b-63dc657f7f78.png)
+
+Lo siguiente que vemos es el menu de la parte izquierda
+
+![image](https://user-images.githubusercontent.com/19189836/111837471-ef521180-88c5-11eb-81a3-00b1b0073760.png)
+
+Primero tenemos el avatar el nombre de la persona de la que esta en el sistema en este caso podria ver quien este logueado y los diferentes menus que tenemos
+
+![image](https://user-images.githubusercontent.com/19189836/111837627-2aecdb80-88c6-11eb-9b4b-d5abe76491d5.png)
+
+Al precionar sobre el usuario le muestra la primera vista solictada que es donde aparece el nombre,correo y telefono del propietario.
+
+![image](https://user-images.githubusercontent.com/19189836/111837718-49eb6d80-88c6-11eb-9589-fda02a7c709e.png)
+
+La siguiente vista es de los productos scrapeados de amazon.
+
+![image](https://user-images.githubusercontent.com/19189836/111838075-cd0cc380-88c6-11eb-95f9-8d07271635ef.png)
+ 
+En la esquina inferior izquierda tenemos dos botones uno es para realizar el scrape a amazon y el otro boton es para vaciar la tabla de productos.
+ 
+ ![image](https://user-images.githubusercontent.com/19189836/111838209-fdecf880-88c6-11eb-9304-d9765ec853e7.png)
+
+En la siguiente vista tenemos el JSON de los productos scrapeados de amazon.
+
+![image](https://user-images.githubusercontent.com/19189836/111838295-2543c580-88c7-11eb-84fc-5267f8d090b7.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
