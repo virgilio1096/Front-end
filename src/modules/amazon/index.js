@@ -57,7 +57,8 @@ export default function Amazon(props) {
       setLoading(false);
     })
     .catch(function (error) {
-      console.log(error);
+      setMensaje('Error al momento de consultar'+error)
+      setAlerta(true);
       setLoading(false);
     });
   }
@@ -76,7 +77,7 @@ export default function Amazon(props) {
       getData();
     })
     .catch(function (error) {
-      setMensaje('Error al actualizar')
+      setMensaje('Error al actualizar '+error)
       setAlerta(true);
       setLoading(false);
     });
@@ -97,7 +98,7 @@ export default function Amazon(props) {
       getData();
     })
     .catch(function (error) {
-      setMensaje('Error al eliminar los datos')
+      setMensaje('Error al eliminar los datos'+error)
       setAlerta(true);
       setLoading(false);
     });
