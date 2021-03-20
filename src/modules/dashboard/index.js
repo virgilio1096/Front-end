@@ -139,7 +139,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
     padding: theme.spacing(3),
     overflow: 'auto'
   },

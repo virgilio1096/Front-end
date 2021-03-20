@@ -114,7 +114,11 @@ export default function Amazon(props) {
   const classes = useStyles();
   return (
     <Grid>
-
+      <Grid item xs={12} style={{textAlign:'center'}}>
+        <Typography variant="h3" gutterBottom>
+            PRODUCTOS MAS VENDIDOS EN AMAZON
+        </Typography>
+    </Grid>
       {loading &&
           <Grid item xs={12}>
             <div style={{ textAlign: 'center', padding: '1rem 0 0' }}>
