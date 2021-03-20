@@ -6,6 +6,7 @@ import { Grid, Typography } from '@material-ui/core';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import IconButton from '@material-ui/core/IconButton';
+import Snackbar from '@material-ui/core/Snackbar';
 import EditIcon from '@material-ui/icons/Edit';
 import StarIcon from '@material-ui/icons/Star';
 import CheckIcon from '@material-ui/icons/Check';
@@ -32,6 +33,8 @@ export default function Amazon(props) {
   const [loading, setLoading] = useState(false);
   const [idEdit, setidEdit] = useState();
   const [openModalEdit, setOpenModalEdit] = useState(false);
+  const [mensaje, setMensaje] = useState("");
+  const [alerta, setAlerta] = useState(false);
   function getData(){
     setLoading(true);
     var config = {
@@ -46,13 +49,18 @@ export default function Amazon(props) {
         let date_agroup = restructuredData(response.data);
         console.log(date_agroup)
         setData(date_agroup);
+        setMensaje('Registros en la tabla')
+        setAlerta(true);
       }else{
         setData([]);
+        setMensaje('No hay registros')
+        setAlerta(true);
       }
       setLoading(false);
     })
     .catch(function (error) {
-      console.log(error);
+      setMensaje('Error de consulta '+error)
+      setAlerta(true);
       setLoading(false);
     });
   }
@@ -65,13 +73,14 @@ export default function Amazon(props) {
     };
     Axios(config)
     .then(function (response) {
-      
-      console.log(response);
+      setMensaje('Registros Actualizados con Amazon')
+      setAlerta(true);
       getData();
       setLoading(false);
     })
     .catch(function (error) {
-      console.log(error);
+      setMensaje('Error al actualizar '+error)
+      setAlerta(true);
       setLoading(false);
     });
   }
@@ -84,12 +93,14 @@ export default function Amazon(props) {
     };
     Axios(config)
     .then(function (response) {
-      console.log(response);
+      setMensaje('Registros Eliminados')
+      setAlerta(true);
       getData();
       setLoading(false);
     })
     .catch(function (error) {
-      console.log(error);
+      setMensaje('Error al eliminar los datos '+error)
+      setAlerta(true);
       setLoading(false);
     });
   }
@@ -110,7 +121,9 @@ export default function Amazon(props) {
   useEffect(() => {
     getData();
   }, []);
-
+  const handleClose = () => {
+    setAlerta(false);
+  };
   const classes = useStyles();
   return (
     <Grid>
@@ -231,6 +244,13 @@ export default function Amazon(props) {
           </Grid>
         </Grid>
       </div>
+      <Snackbar
+        open={alerta}
+        autoHideDuration={4000}
+        onClose={handleClose}
+        message={mensaje}
+        key={'top' + 'center'}
+      />
     </Grid>
 
   );
