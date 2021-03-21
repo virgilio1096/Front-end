@@ -1,3 +1,45 @@
+# Proyecto Front end scrape a lo mas vendido en amazon
+
+
+Cuando se termine de clonar nos movemos dentro de la carpeta favor de correr el siguiente comando esto es para descragar todas las dependencias
+
+### `npm install`
+
+Cuando Se termine de ejecutar el instalador de dependencias favor de correr el siguiente comando, esto nos ayudara a correr nuestro proyecto.
+
+### `npm start`
+
+Cuando el proyecto ya este corriendo de forma correcta nos abrira de forma automatica la vista principal de nuestro sistema.
+
+![image](https://user-images.githubusercontent.com/19189836/111892915-7c33c280-89cd-11eb-9668-359dcce31c54.png)
+
+En nuestro navbar tenemos 3 menus y el icono de del propietario de la sesion en este caso no se uso un logeo pero con esto podemos mostrar de quien es la sesion y una foto si es posible.
+
+![image](https://user-images.githubusercontent.com/19189836/111892974-a9807080-89cd-11eb-9a3b-f90432667fdb.png)
+
+En el primer menu tenemos la parte de usuario donde tenemos los datos de nombre, correo y el telefono del propietario del proyecto
+
+![image](https://user-images.githubusercontent.com/19189836/111893003-d46ac480-89cd-11eb-8b39-e7e7a0eebaaf.png)
+
+En el siguiente menu tenemos amazon donde se muestran los productos scrapeados de la pagina de lo mas vendido en amazon.
+
+![image](https://user-images.githubusercontent.com/19189836/111893043-fe23eb80-89cd-11eb-92cb-5c538f048ad1.png)
+
+
+En la parte inferior tenemos dos botones uno es para ejecutar el api que realiza el scraper a amazon y el otro icono es para poder vaciar la tabla de los productos esto es para realizar pruebas de que se esta realizando el scraper correcto.
+
+![image](https://user-images.githubusercontent.com/19189836/111893068-2a3f6c80-89ce-11eb-831e-1d8a15f0bd5e.png)
+
+
+En el siguiente menu tenemos a el modulo de json donde se muestra una consulta compleja de todos los productos scrapeados de amazon agrupandolos por el categoria.
+
+![image](https://user-images.githubusercontent.com/19189836/111893099-522ed000-89ce-11eb-93e8-e15d051a0611.png)
+
+
+Documentacion de node js
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
